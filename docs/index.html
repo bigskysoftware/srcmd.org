@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>src/md</title>
+  <link rel="icon" href="srcmd.svg" type="image/svg+xml">
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+
+    body {
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 1rem;
+      font: 1rem/1.6 system-ui, sans-serif;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border: 1px solid currentColor;
+    }
+
+    code {
+      font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, monospace;
+    }
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: .3em;
+      font-size: 3rem;
+      line-height: 1;
+    }
+
+    h1 img {
+      height: 1.2em;
+    }
+
+    h1 svg {
+      height: .95em;
+      fill: currentColor;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1><img src="srcmd.svg" alt=""> 
+      <svg viewBox="60 19 4420 908" role="img" aria-label="/src/md/">
+        <path d="M418 19H539L180 927H60ZM499 628H622Q623 659 634 676Q645 692 672 699Q698 706 747 706Q806 706 828 694Q850 683 850 652Q850 632 838 618Q825 605 795 595Q765 585 710 575Q630 560 587 542Q543 523 525 494Q506 466 506 419Q506 358 527 326Q547 293 597 279Q646 265 736 265Q824 265 872 280Q920 294 940 328Q960 363 961 427H841Q839 393 817 380Q794 368 735 368Q673 368 650 379Q627 390 627 420Q627 436 659 448Q690 461 781 482Q856 499 897 520Q938 540 956 571Q973 602 973 651Q973 713 952 747Q931 781 881 795Q830 809 738 809Q642 809 591 793Q539 777 518 738Q497 699 499 628ZM1113 278H1223L1218 385H1229Q1266 323 1282 303Q1298 283 1316 278Q1334 273 1382 273Q1450 273 1510 275V395Q1492 394 1449 394Q1371 394 1329 399Q1309 402 1286 425Q1263 448 1248 480Q1233 513 1233 543V800H1113ZM1601 540Q1601 432 1624 373Q1646 314 1700 290Q1753 265 1851 265Q1937 265 1984 282Q2031 299 2052 340Q2072 380 2074 454H1953Q1946 405 1926 388Q1905 370 1857 370Q1804 370 1776 386Q1747 401 1735 438Q1723 474 1723 541Q1723 605 1735 640Q1747 675 1776 690Q1805 704 1858 704Q1904 704 1925 688Q1945 673 1954 631H2074Q2072 701 2052 739Q2031 777 1985 793Q1938 809 1853 809Q1754 809 1700 785Q1646 761 1624 704Q1601 646 1601 540ZM2448 19H2569L2210 927H2090ZM2577 278H2690V342H2702Q2740 297 2775 281Q2810 265 2873 265Q2924 265 2950 282Q2976 300 2988 342H2989Q3007 297 3045 281Q3084 265 3168 265Q3227 265 3255 284Q3282 302 3294 345Q3305 388 3305 468V800H3189V486Q3189 420 3169 396Q3150 373 3097 373Q3059 373 3038 384Q3017 396 3008 423Q2999 450 2999 500V800H2883L2885 486Q2886 422 2864 398Q2842 373 2788 373Q2751 373 2730 385Q2709 397 2701 425Q2693 453 2693 505V800H2577ZM3450 536Q3450 429 3470 372Q3489 314 3536 290Q3582 265 3667 265Q3733 265 3763 278Q3793 291 3809 327H3817V72H3938V800H3817V746H3809Q3786 783 3757 796Q3727 810 3667 810Q3582 810 3536 786Q3489 761 3470 702Q3450 644 3450 536ZM3702 705Q3748 705 3773 690Q3798 674 3809 638Q3819 602 3819 536Q3819 470 3809 434Q3798 399 3773 384Q3748 369 3702 369Q3651 369 3624 384Q3596 399 3585 434Q3573 470 3573 536Q3573 602 3585 638Q3596 675 3624 690Q3651 705 3702 705ZM4359 19H4480L4121 927H4001Z"/>
+      </svg>
+    </h1>
+
+    <h2>What</h2>
+
+    <p>Keep <a href="https://daringfireball.net/projects/markdown/">Markdown</a> checked into your <a href="https://htmx.org/essays/markdown-in-src/"><code>/src</code></a> (or equivalent) directory
+      to capture the intent of your module.</p>
+
+    <h2>Why</h2>
+
+    <p>Today, agents often generate code from ephemeral prompts, informal messages, etc.</p>
+
+    <p>Generated code is both lossy &amp; noisy when it comes to the original intent that created it.</p>
+
+    <p>To address this, we suggest keeping the original intent near the generated code in the form of Markdown.</p>
+
+    <p>This enables humans and agents to quickly find the original intent, design decisions &amp; subtleties that went into
+        the current shape of the generated code.</p>
+
+    <p>Note that the intent captured here is <em>not</em> a formal specification or documentation, but rather an informal
+      yet technical capture of the thinking that went into a module, feature, API, etc. It is developer (and agent) focused.</p>
+
+    <h2>Suggested Layout</h2>
+    <pre><code>src/md/
+  README.md           overview + index, agent entry point
+  features/           login.md, ...
+  data/               user.md, ...
+  api/                accounts.md, ...
+  infrastructure/     database.md, ...</code></pre>
+
+
+    <p>All subdirectories are optional.</p>
+
+    <h2>Suggested Content</h2>
+    <ul>
+      <li><code>README.md</code> should hold a technical overview of the module and note any particularly important subtleties, as well as a file index
+        <ul>
+          <li>The file index lists and links every other file in <code>/src/md</code></li>
+          <li>The heading is <code>## File Index</code></li>
+          <li>Each line is one link and a brief description of what that file holds</li>
+          <li>Paths are relative to <code>/src/md</code></li>
+        </ul>
+      </li>
+      <li>All other documents in <code>/src/md</code> should focus on capturing intent, design decisions and tricky aspects of the module</li>
+      <li>All documents in <code>/src/md</code> should strive for a high signal-to-noise ratio, capturing important concepts and decisions, omitting obvious and unimportant information</li>
+      <li><a href="https://www.asd-ste100.org/">Simplified Technical English</a> is suggested for all files</li>
+      <li>Formal specifications, documentation, process documents, etc. may be linked from <code>/src/md</code> files, but
+        these types of artifacts should not be included in <code>/src/md</code></li>
+    </ul>
+
+    <h2>Example File Index</h2>
+    <pre><code>## File Index
+
+- [features/login.md](features/login.md): login & session rules
+- [data/user.md](data/user.md): user data model</code></pre>
+
+    <h2>Suggested Workflows</h2>
+    <ul>
+      <li>Humans work to curate the Markdown with agents</li>
+      <li>Markdown is changed to establish intent, then code and tests are derived from it</li>
+      <li>Tests create an executable specification for the intent</li>
+    </ul>
+
+    <h2>Suggested Extensions</h2>
+    <ul>
+      <li>A <code>tmp</code> directory, listed in <code>.gitignore</code>, can be used for capturing ongoing plans, TODO.mds, etc.</li>
+    </ul>
+
+    <h2>Example</h2>
+    <p>This site follows this layout. See <a href="https://github.com/bigskysoftware/srcmd.org/tree/main/src/md">its src/md</a>.</p>
+  </main>
+</body>
+</html>

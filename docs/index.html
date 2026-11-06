@@ -107,6 +107,21 @@
 - [features/login.md](features/login.md): login & session rules
 - [data/user.md](data/user.md): user data model</code></pre>
 
+    <h2>Suggested Adoption Mechanism</h2>
+    <ul>
+      <li>The user tells the agent to read <code>https://srcmd.org</code> and adopt it, optionally with a different directory for the Markdown</li>
+      <li>The agent adds this information to <code>AGENTS.md</code>, including any customizations</li>
+    </ul>
+
+    <p>Example prompt:</p>
+    <pre><code>Read https://srcmd.org and adopt it. Use docs/intent instead of src/md.</code></pre>
+
+    <p>Example <code>AGENTS.md</code> entry:</p>
+    <pre><code>## Intent
+
+This project follows https://srcmd.org, with the Markdown in docs/intent.
+Read docs/intent/README.md first.</code></pre>
+
     <h2>Suggested Workflows</h2>
     <ul>
       <li>Humans work to curate the Markdown with agents</li>
@@ -116,7 +131,7 @@
 
     <h2>Suggested Extensions</h2>
     <ul>
-      <li>A <code>tmp</code> directory, listed in <code>.gitignore</code>, can be used for capturing ongoing plans, TODO.mds, etc.</li>
+      <li>A <code>tmp</code> directory, listed in <code>.gitignore</code>, can be used for capturing ongoing plans, <code>TODO.md</code>, etc.</li>
     </ul>
 
     <h2>Example</h2>
